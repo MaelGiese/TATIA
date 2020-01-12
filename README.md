@@ -30,5 +30,5 @@ Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detect
 Lancer le main puis utiliser la fonction `mo.is_sarcasm(model, tokenizer, sentence)`.
 
 #### ex :
-* `mo.is_sarcasm(model, tokenizer, 'Everyone assumes I’m psychopath, except for my friends who live deep inside my head.')` test si la phrase 'Everyone assumes I’m psychopath, except for my friends who live deep inside my head.' est sarcastique ou non
+* `mo.is_sarcasm(model, tokenizer, 'Everyone assumes I’m psychopath, except for my friends who live deep inside my head.')` test si la phrase est sarcastique ou non
 * Output : `Sarcasm`
