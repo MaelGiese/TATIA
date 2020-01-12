@@ -19,12 +19,16 @@ Chaque ligne du fichier contient 3 attributs :
 
 * ```article_link```: Lien vers l'article
 
+ Les données sont bien réparti
+ 
+ https://github.com/MaelGiese/TATIA/blob/master/image/sarcastic%20vs%20non-sarcastic.png
+ 
 ### Nettoyage des données
 Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
 
 * Suppréssion de la colonne ```article_link```, on ne l'utilisera pas
 * On retire toute les ```headline``` null
-* Séparation du label ```is_sarcastic``` et de la feature ```headline```
+* Séparation du label ```is_sarcastic``` et de la seule feature ```headline```
 
 Toutes les fonctions utilisées pour nettoyer les données se trouve dans le fichier `Data_pre_treatment.py`
 
