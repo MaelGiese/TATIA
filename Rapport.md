@@ -65,10 +65,10 @@ Pour la suite nous ne parlerons que de l'implémentation utilisant les bag of wo
 ## Model 
 Le model utilisé est un model séquentiel de keras.  
 Code :  
-Setup du model
+Setup du model  
 ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/Model%20setup.JPG)
   
-Entrainement du model
+Entrainement du model  
 ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/Model%20training.JPG)
 
 ## Evaluation
