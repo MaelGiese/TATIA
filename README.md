@@ -1,4 +1,4 @@
-# TATIA
+# Projet TATIA - Sarcasme détection
 
 ## Data
 Each record consists of three attributes:
