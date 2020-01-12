@@ -1,8 +1,11 @@
 # Projet TATIA - Sarcasme détection
 
-Groupe : 
+### Groupe : 
 * Giese Mael
 * Simon Fabrice
+
+### Sujet :
+
 
 ## Dataset
 
