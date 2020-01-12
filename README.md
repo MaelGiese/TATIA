@@ -7,7 +7,7 @@
 ### Sujet :
 Le but du projet est de développer un programme capable de reconnaître une phrase sarcastique.
 
-## Dataset
+## Dataset - News Headlines Dataset For Sarcasm Detection
 
 Chaque ligne du fichier contient 3 attributs :
 
