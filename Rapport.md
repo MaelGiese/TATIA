@@ -64,6 +64,7 @@ Pour la suite nous ne parlerons que de l'implémentation utilisant les bag of wo
 
 
 ## Evaluation
+Suite a l'entrainement du model on obtient le score suivant :
 
 ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/accuracy.JPG "accuracy")
 
