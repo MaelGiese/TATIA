@@ -6,8 +6,6 @@ Groupe :
 
 ## Dataset
 
-https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
-
 Each record consists of three attributes:
 
 * ```is_sarcastic```: 1 if the record is sarcastic otherwise 0
@@ -15,3 +13,5 @@ Each record consists of three attributes:
 * ```headline```: the headline of the news article
 
 * ```article_link```: link to the original news article. Useful in collecting supplementary data
+
+Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
