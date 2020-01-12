@@ -7,7 +7,7 @@
 ### Sujet :
 Le but du projet est de développer un programme capable de reconnaître une phrase sarcastique.
 
-## Dataset - News Headlines Dataset For Sarcasm Detection
+## Dataset
 
 Chaque ligne du fichier contient 3 attributs :
 
@@ -25,6 +25,11 @@ Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detect
 * `model.py` contient les fonctions permettant d'entrainer un model sur les données prétraitées puis de sauvegarder ce model et de le recharger.
 * `Word_embedding.py` permet d'entrainer un model Word2Vec sur le dataset
 * `pretrained_word_embedding.py` permet de charger un dictionnaire de vecteurs précalculé
+
+### Setup
+* `pip install keras`
+* `pip  install -U scikit-learn`
+
 
 ### Utilisation
 Lancer le main puis utiliser la fonction `mo.is_sarcasm(model, tokenizer, sentence)`.
