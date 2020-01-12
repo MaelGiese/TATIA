@@ -29,10 +29,11 @@ Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
 * Suppréssion de la colonne ```article_link```, on ne l'utilisera pas
 * On retire toute les ```headline``` null
 * Séparation du label ```is_sarcastic``` et de la seule feature ```headline```
+* Suppréssion des stop words en fonction de quelle algorithme on va utiliser
 
 Toutes les fonctions utilisées pour nettoyer les données se trouve dans le fichier `Data_pre_treatment.py`
 
-### Transformation des données en vecteurs
+## Détails de la conception et implémentation de l'algorithme/système
 
 #### Tokenizer
 Utilisation d'un tokenizer deja implémenté par keras, création d'un bag of words a partir du dataset.
@@ -61,4 +62,12 @@ Les solutions que nous avons utilisées pour les implémentations avec Word2Vec 
   
 Pour la suite nous ne parlerons que de l'implémentation utilisant les bag of words étant données que c'est celle qui donne les meilleurs résultats.
 
-## Détails de la conception et implémentation de l'algorithme/système
+
+## Evaluation
+
+![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/accuracy.JPG "accuracy")
+
+
+
+
+
