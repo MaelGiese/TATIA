@@ -40,7 +40,7 @@ Utilisation d'un tokenizer deja implémenté par keras, création d'un bag of wo
 C'est l'implémentation la plus simple cependant pas la plus intéréssante à utiliser, on a donc essayé d'autres techniques.
 
 #### Word2Vec
-L'idée d'utiliser des vecteurs pour représenter chaque mots d'une phrase puis d'entrainer un model sur ce "bag of vectors" semble etre une bonne idée pour détecter du sarcasme en théorie, on pourait supposer que dans une phrase sarcastique on a au moins deux mots très peu similaire.  
+Utiliser des vecteurs pour représenter chaque mots d'une phrase puis d'entrainer un model sur ce "bag of vectors" semble etre une bonne idée pour détecter du sarcasme en théorie, on pourait supposer que dans une phrase sarcastique on a au moins deux mots très peu similaire.  
 On a donc entrainé un model Word2Vec a partir de notre jeu données (toute les fonctions utilisées pour entrainer notre model Word2Vec sont dans le fichier `Word_embedding.py`) puis nous avons utilisé ce model pour créer un tableau de vecteur représentant chaque phrases du dataset.  
 Chaque phrase est donc maintenant constituée d'un tableau vecteur, chaque vecteur représentant un de ses mots, seulement deux problèmes se posent :
 1. Nos données sont maintenant représenté en 3 dimensions non plus en 2 (avec un tokenizer par exemple on a chaque phrase représenté par un unique vecteur ici on a un tableau de vecteur pour chaque phrase).
