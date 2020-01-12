@@ -5,7 +5,7 @@
 * Simon Fabrice
 
 ### Sujet :
-
+Le but du projet est de développer un programme capable de reconnaître un phrase sarcastique.
 
 ## Dataset
 
