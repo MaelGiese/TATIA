@@ -4,7 +4,7 @@
 
 * Trouver un dataset utilisable (il est assez difficile de trouver des datasets de phrases sarcastiques)
 * Nettoyer les données
-* Transformer les données en vecteurs (un model ne peut pas lire du texte brut) 
+* Transformation des données en vecteurs (un model ne peut pas lire du texte brut) 
 * Entrainer un model sur les données
 * Analyser les résultats du model
 
@@ -26,7 +26,14 @@ Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
 * On retire toute les ```headline``` null
 * Séparation du label ```is_sarcastic``` et de la feature ```headline```
 
+Toutes les fonctions utilisées pour nettoyer les données se trouve dans le fichier `Data_pre_treatment.py`
 
+### Transformation des données en vecteurs
+#### Tokenizer
+Utilisation d'un tokenizer deja implémenté par keras, création d'un bag of words a partir du dataset.
+C'est l'implémentation la plus simple cependant 
+#### Word2Vec
+#### Pretrained word embedding
 
 Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
 
