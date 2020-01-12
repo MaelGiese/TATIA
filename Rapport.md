@@ -26,10 +26,10 @@ Chaque ligne du fichier contient 3 attributs :
 ### Nettoyage des données
 Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
 
-* Suppréssion de la colonne ```article_link```, on ne l'utilisera pas
+* Suppression de la colonne ```article_link```, on ne l'utilisera pas
 * On retire toute les ```headline``` null
 * Séparation du label ```is_sarcastic``` et de la seule feature ```headline```
-* Suppréssion des stop words en fonction de quelle algorithme on va utiliser
+* Suppréssion des stop words en fonction de quel algorithme on va utiliser
 
 Toutes les fonctions utilisées pour nettoyer les données se trouve dans le fichier `Data_pre_treatment.py`
 
@@ -37,26 +37,26 @@ Toutes les fonctions utilisées pour nettoyer les données se trouve dans le fic
 
 #### Tokenizer
 Utilisation d'un tokenizer deja implémenté par keras, création d'un bag of words a partir du dataset.
-C'est l'implémentation la plus simple cependant pas la plus intéréssante a utiliser, on a donc essayé d'autre technique.
+C'est l'implémentation la plus simple cependant pas la plus intéréssante à utiliser, on a donc essayé d'autres techniques.
 
 #### Word2Vec
 L'idée d'utiliser des vecteurs pour représenter chaque mots d'une phrase puis d'entrainer un model sur ce "bag of vectors" semble etre une bonne idée pour détecter du sarcasme en théorie, on pourait supposer que dans une phrase sarcastique on a au moins deux mots très peu similaire.  
 On a donc entrainé un model Word2Vec a partir de notre jeu données (toute les fonctions utilisées pour entrainer notre model Word2Vec sont dans le fichier `Word_embedding.py`) puis nous avons utilisé ce model pour créer un tableau de vecteur représentant chaque phrases du dataset.  
-Chaque phrase est donc maintenant constituée d'un tableau vecteur, chaque vecteur représentant un de ses mots, seulement deux problèmes se pose :
+Chaque phrase est donc maintenant constituée d'un tableau vecteur, chaque vecteur représentant un de ses mots, seulement deux problèmes se posent :
 1. Nos données sont maintenant représenté en 3 dimensions non plus en 2 (avec un tokenizer par exemple on a chaque phrase représenté par un unique vecteur ici on a un tableau de vecteur pour chaque phrase).
 2. Chaque phrases ayant un nombre de mots différent la taille de chaque tableau de vecteur est différente (chaque vecteur doit avoir la meme taille si l'ont veut entrainer un model).  
   
-Pour régler le 1. problème nous avons du fusionner tous les vecteurs d'un tableau de vecteur (une phrase) en un seul vecteur contenant toute les valeurs, cette solution n'est pas optimal mais nous n'avons pas trouvé d'autre solution.  
+Pour régler le 1. problème nous avons du fusionner tous les vecteurs d'un tableau de vecteur (une phrase) en un seul vecteur contenant toute les valeurs, cette solution n'est pas optimale mais nous n'avons pas trouvé d'autre solution.  
 Pour régler le 2. problème nous avons fixé une taille maximale pour nos phrases et ensuite remplis les valeurs inexistantes par des 0.
 
 
 #### Pretrained word embedding
-L'idée ici est la meme que pour notre implémentation avec Word2Vec sauf que nous avons utilisés un model de word embedding deja entrainer (tout les fonctions utilisées sont dans le fichier `pretrained_word_embedding.py`).
-Nous avons utilisés le meme algorithme et les meme solutions que pour notre implémentation avec Word2Vec
+L'idée ici est la même que pour notre implémentation avec Word2Vec sauf que nous avons utilisés un model de word embedding déjà entrainer (toutes les fonctions utilisées sont dans le fichier `pretrained_word_embedding.py`).
+Nous avons utilisé le meme algorithme et les mêmes solutions que pour notre implémentation avec Word2Vec
 
 #### Résultats
 
-Les résultats obtenus par la première solution sont assez bon 80% de précision environ mais les implémentation utilisant les word embedding ont de mauvais résultat (plus proche de 60% de précision).  
+Les résultats obtenus par la première solution sont assez bon 80% de précision environ mais les implémentations utilisant les word embedding ont de mauvais résultats (plus proche de 60% de précision).  
   
 Les solutions que nous avons utilisées pour les implémentations avec Word2Vec et avec un pretrained model de word embedding ne sont pas optimal et nuisent aux résultats obtenus par le model néanmois il était intéressant d'essayer d'implémenter ces solutions nous meme.
   
