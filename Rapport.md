@@ -39,15 +39,21 @@ C'est l'implémentation la plus simple cependant pas la plus intéréssante a ut
 
 #### Word2Vec
 L'idée d'utiliser des vecteurs pour représenter chaque mots d'une phrase puis d'entrainer un model sur ce "bag of vectors" semble etre une bonne idée pour détecter du sarcasme en théorie, on pourait supposer que dans une phrase sarcastique on a au moins deux mots très peu similaire.  
-On a donc entrainé un model Word2Vec a partir de notre jeu données (toute les fonctions utilisés pour entrainer notre model Word2Vec sont dans le fichier `Word_embedding.py`) puis nous avons utilisé ce model pour créer un tableau de vecteur représentant chaque phrases du dataset.  
+On a donc entrainé un model Word2Vec a partir de notre jeu données (toute les fonctions utilisées pour entrainer notre model Word2Vec sont dans le fichier `Word_embedding.py`) puis nous avons utilisé ce model pour créer un tableau de vecteur représentant chaque phrases du dataset.  
 Chaque phrase est donc maintenant constituée d'un tableau vecteur, chaque vecteur représentant un de ses mots, seulement deux problèmes se pose :
-1. * Nos données sont maintenant représenté en 3 dimensions non plus en 2 (avec un tokenizer par exemple on a chaque phrase représenté par un unique vecteur ici on a un tableau de vecteur pour chaque phrase).
-2. * Chaque phrases ayant un nombre de mots différent la taille de chaque tableau de vecteur est différente.
-
-
+1. Nos données sont maintenant représenté en 3 dimensions non plus en 2 (avec un tokenizer par exemple on a chaque phrase représenté par un unique vecteur ici on a un tableau de vecteur pour chaque phrase).
+2. Chaque phrases ayant un nombre de mots différent la taille de chaque tableau de vecteur est différente (chaque vecteur doit avoir la meme taille si l'ont veut entrainer un model).  
+  
+Pour régler le 1. problème nous avons du fusionner tous les vecteurs d'un tableau de vecteur (une phrase) en un seul vecteur contenant toute les valeurs, cette solution n'est pas optimal mais nous n'avons pas trouvé d'autre solution.  
+Pour régler le 2. problème nous avons fixé une taille maximale pour nos phrases et ensuite remplis les valeurs inexistantes par des 0.
 
 
 #### Pretrained word embedding
+L'idée ici est la meme que pour notre implémentation avec Word2Vec sauf que nous avons utilisé un model de word embedding deja entrainer (tout les fonctions utilisées sont dans le fichier `pretrained_word_embedding.py`).
+
+#### Résultats
+
+Ces solutions ne sont pas optimal et nuisent aux résultats obtenus par le model néanmois il était intéressant d'essayer d'implémenter cet algorithme nous meme.
 
 Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
 
