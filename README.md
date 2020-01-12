@@ -32,3 +32,6 @@ Lancer le main puis utiliser la fonction `mo.is_sarcasm(model, tokenizer, senten
 #### ex :
 * `mo.is_sarcasm(model, tokenizer, 'Everyone assumes I’m psychopath, except for my friends who live deep inside my head.')` test si la phrase est sarcastique ou non
 * Output : `Sarcasm`
+
+## Rapport
+Le Rapport du projet ce trouve ici : https://github.com/MaelGiese/TATIA/edit/master/Rapport.md
