@@ -34,4 +34,4 @@ Lancer le main puis utiliser la fonction `mo.is_sarcasm(model, tokenizer, senten
 * Output : `Sarcasm`
 
 ## Rapport
-Le Rapport du projet ce trouve ici : https://github.com/MaelGiese/TATIA/edit/master/Rapport.md
+Le Rapport du projet se trouve ici : https://github.com/MaelGiese/TATIA/edit/master/Rapport.md
