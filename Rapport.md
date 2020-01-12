@@ -19,9 +19,10 @@ Chaque ligne du fichier contient 3 attributs :
 
 * ```article_link```: Lien vers l'article
 
- 
+ Les données sont bien réparties entre les titres sarcastique et non-sarcastique
  ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/sarcastic%20vs%20non-sarcastic.png "sarcasme vs non-sarcastique")
  
+ Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
 ### Nettoyage des données
 Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
 
@@ -49,12 +50,15 @@ Pour régler le 2. problème nous avons fixé une taille maximale pour nos phras
 
 
 #### Pretrained word embedding
-L'idée ici est la meme que pour notre implémentation avec Word2Vec sauf que nous avons utilisé un model de word embedding deja entrainer (tout les fonctions utilisées sont dans le fichier `pretrained_word_embedding.py`).
+L'idée ici est la meme que pour notre implémentation avec Word2Vec sauf que nous avons utilisés un model de word embedding deja entrainer (tout les fonctions utilisées sont dans le fichier `pretrained_word_embedding.py`).
+Nous avons utilisés le meme algorithme et les meme solutions que pour notre implémentation avec Word2Vec
 
 #### Résultats
 
-Ces solutions ne sont pas optimal et nuisent aux résultats obtenus par le model néanmois il était intéressant d'essayer d'implémenter cet algorithme nous meme.
-
-Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection
+Les résultats obtenus par la première solution sont assez bon 80% de précision environ mais les implémentation utilisant les word embedding ont de mauvais résultat (plus proche de 60% de précision).  
+  
+Les solutions que nous avons utilisées pour les implémentations avec Word2Vec et avec un pretrained model de word embedding ne sont pas optimal et nuisent aux résultats obtenus par le model néanmois il était intéressant d'essayer d'implémenter ces solutions nous meme.
+  
+Pour la suite nous ne parlerons que de l'implémentation utilisant les bag of words étant données que c'est celle qui donne les meilleurs résultats.
 
 ## Détails de la conception et implémentation de l'algorithme/système
