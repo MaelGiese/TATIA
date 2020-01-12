@@ -27,8 +27,9 @@ Source : https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detect
 * `pretrained_word_embedding.py` permet de charger un dictionnaire de vecteurs associé 
 
 ## Utilisation
-Lancer le main puis utiliser la fonction mo.is_sarcasm(model, tokenizer, sentence).
+Lancer le main puis utiliser la fonction 'mo.is_sarcasm(model, tokenizer, sentence)'.
+
 #### ex :
-mo.is_sarcasm(model, tokenizer, 'I like trains')
-I like trains
-Non-sarcastic
+*mo.is_sarcasm(model, tokenizer, 'I like trains')
+*I like trains
+*Non-sarcastic
