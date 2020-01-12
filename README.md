@@ -1,6 +1,10 @@
 # Projet TATIA - Sarcasme détection
 
-## Data
+Groupe : 
+* Giese Mael
+* Simon Fabrice
+
+## Dataset
 Each record consists of three attributes:
 
 * ```is_sarcastic```: 1 if the record is sarcastic otherwise 0
