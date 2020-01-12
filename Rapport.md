@@ -21,7 +21,7 @@ Chaque ligne du fichier contient 3 attributs :
 
  Les données sont bien réparti
  
- https://github.com/MaelGiese/TATIA/blob/master/image/sarcastic%20vs%20non-sarcastic.png
+ ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/sarcastic%20vs%20non-sarcastic.png "sarcasme vs non-sarcastique")
  
 ### Nettoyage des données
 Les données du dataset sont assez "propre" peu de nettoyage est nécéssaire.
