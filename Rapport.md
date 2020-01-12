@@ -77,8 +77,5 @@ Suite a l'entrainement du model on obtient le score suivant :
 
 ![alt text](https://github.com/MaelGiese/TATIA/blob/master/image/accuracy.JPG "accuracy")
   
- Le model a une précision de 81% sur les données de tests
-
-
-
+ Le model a une précision de 81% sur les données de tests. Cependant les données d'entrainement étant des titres d'articles le model ne marche pas aussi bien sur des phrases aléatoire.
 
