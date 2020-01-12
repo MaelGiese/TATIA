@@ -31,4 +31,4 @@ Lancer le main puis utiliser la fonction 'mo.is_sarcasm(model, tokenizer, senten
 
 #### ex :
 * `>>> mo.is_sarcasm(model, tokenizer, 'I like trains')` Test si la phrase 'I like trains' est sarcastique ou non
-* `Non-sarcastic`
+* Output : `Non-sarcastic`
